@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Economic times</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="jquery-2.2.4.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    #example{
+        padding: 10px;
+        /*border:2px solid black;*/
+    }
+    .linkPreviewContainer{
+        font-family: UEFA Supercup;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        position: relative;
+        overflow: hidden;
+        max-height: 280px;
+        box-sizing: border-box;
+        color: rgba(0,0,0,.44);
+        box-shadow: 0 1px 4px rgba(0,0,0,.04),inset 0 0 0 1px rgba(0,0,0,.09);
+        display: table;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+.linkPreviewContainer:hover{
+  box-shadow: 3px 3px 5px 6px #ccc; 
+}
+
+.linkPreviewImage{
+display: table-cell;
+vertical-align: middle;
+width: 40%;
+height: 200px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+box-sizing: border-box;
+box-shadow: inset 0 0 0 1px rgba(0,0,0,.09);
+text-decoration: none;
+
+}
+
+a.linkPreviewText{
+display: table-cell;
+vertical-align: middle;
+padding: 20px;
+font-style: normal;
+color: rgba(0,0,0,.6);
+text-decoration: none;
+}
+
+a.linkPreviewText:hover{
+text-decoration: none;
+}
+
+.linkPreviewText strong{
+font-family: UEFA Supercup;
+letter-spacing: 0;
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+line-height: 1.3;
+color: rgba(0,0,0,.9);
+display: block;
+margin-bottom: -8px;
+text-decoration: none;
+}
+
+.linkPreviewText em{
+font-size: 14px;
+font-style: normal;
+color: rgba(0,0,0,.7);
+display: block;
+margin-top: -1px;
+margin-bottom: 10px;
+max-height: 120px;
+overflow: hidden;
+text-decoration: none;
+}
+#button{
+    margin-left: 45%;
+    border-radius: 5px;
+    width: 15%;
+    background-color: yellow;
+    font-weight: bold;
+}
+#button:hover{
+    color: red;
+    transform: translateX(2px)translateY(2px);
+}
+#timi,#timi2,#timi3,#timi4,#timi5{
+    margin-left: 85%;
+}
+#example,#example2,#example3,#example4,#example5{
+    padding: 20px;
+    height:200px;
+    box-shadow: 2px 2px 4px #000000;
+}
+#search{
+    margin-left: 25%;
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px;
+}
+#submit_form{
+    border-radius: 5px;
+    width: 5%;
+    border:2px solid red;
+}
+#submit_form:hover{
+    color: blue;
+    transform: translateX(2px)translateY(2px);
+}
+#main{
+	padding:20px;
+}
+
+  </style>
+  
+    
+
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyDQwk60FvDVYKJN-Cy3xPKulLrRdYCZT8M",
+    authDomain: "pichkari2.firebaseapp.com",
+    databaseURL: "https://pichkari2.firebaseio.com",
+    projectId: "pichkari2",
+    storageBucket: "pichkari2.appspot.com",
+    messagingSenderId: "482691617687"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</head>
+
+<body onload = "timestamp()">
+    <!-- Preloader Start -->
+    
+
+    <!-- Background Pattern Swither -->
+
+    <!-- ****** Header Area Start ****** -->
+    
+    <!-- ****** Header Area End ****** -->
+
+    <!-- ****** ut description Area Start ****** -->
+    
+    <div class="breadcumb-area" style="background-image: url(img/bg-img/breadcumb.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="bradcumb-title text-center">
+                        <h2>ECONOMIC TIMES</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <
+            
+    <div class="breadcumb-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Economic Times</li>
+                        </ol>
+                        <select onChange="window.open(this.value)" style="float:right">
+                            <option value ="" id="username"></option> 
+                            <option value="reuters.html">Reuters</option>
+                            <option value="economic_times.html">Switch User</option>
+                            
+                        </select>
+                    </nav>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+        <div class="search_box">
+    <form action="" id="form2">
+        <div>
+            <input type="text" id="search">
+            <input type="button" id="submit_form" onclick="checkInput()" value="Submit">
+        </div>
+    </form>
+</div>
+
+<!--END SEARCH BOX -->
+<script>
+    function checkInput() {
+        var query = document.getElementById('search').value;
+        window.find(query);
+        return true;
+    }
+</script>
+        
+    
+    <!-- ****** Breadcumb Area End ****** -->
+
+    <!-- ****** Archive Area Start ****** -->
+<div id="main">    
+<div id="example" ><img id="image1" src="" alt="image"style="float:left;padding:15px;"><div id="heading" style="display: inline;float:center padding:20px;font-weight:bold;font-size:2em;"></div><br><div style="display: inline;float:center padding:20px;" id="head_re"></div><div id="timi"></div></div><br><input type="button" value="CLick here" id = "button" onclick="dosomething(1)" >
+<br><br>
+<div id="example2" ><img id="image2" src="" alt="image"style="float:left;padding:15px;"><div id="heading2" style="display: inline;float:center padding:20px;font-weight:bold;font-size:2em;"></div><br><div style="display: inline;float:center padding:20px;" id="head_re2"></div><div id="timi2"></div></div><br><input type="button" value="CLick here" id = "button" onclick="dosomething(2)" >
+<br><br>
+<div id="example3" ><img id="image3" src="" alt="image"style="float:left;padding:15px;"><div id="heading3" style="display: inline;float:center padding:20px;font-weight:bold;font-size:2em;"></div><br><div style="display: inline;float:center padding:20px;" id="head_re3"></div><div id="timi3"></div></div><br><input type="button" value="CLick here" id = "button" onclick="dosomething(3)" >
+<br><br>
+<div id="example4" ><img id="image4" src="" alt="image"style="float:left;padding:15px;"><div id="heading4" style="display: inline;float:center padding:20px;font-weight:bold;font-size:2em;"></div><br><div style="display: inline;float:center padding:20px;" id="head_re4"></div><div id="timi4"></div></div><br><input type="button" value="CLick here" id = "button" onclick="dosomething(4)" >
+<br><br>
+<div id="example5" ><img id="image5" src="" alt="image"style="float:left;padding:15px;"><div id="heading5" style="display: inline;float:center padding:20px;font-weight:bold;font-size:2em;"></div><br><div style="display: inline;float:center padding:20px;" id="head_re5"></div><div id="timi"></div></div><br><input type="button" value="CLick here" id = "button" onclick="dosomething(5)" >
+<br><br>
+<div id="example7"></div><div id="timi7"></div>
+<div id="example8"></div><div id="timi8"></div>
+<div id="example9"></div><div id="timi9"></div>
+<div id="example10"></div><div id="timi10"></div>
+<div id="example11"></div><div id="timi11"></div>
+<div id="example12"></div><div id="timi12"></div>
+
+<div id="example13"></div><div id="timi13"></div>
+<div id="example14"></div><div id="timi14"></div>
+<div id="example15"></div><div id="timi15"></div>
+<div id="example16"></div><div id="timi16"></div>
+<div id="example17"></div><div id="timi17"></div>
+<div id="example18"></div><div id="timi18"></div>
+</div>
+<script>
+    //alert("Hi");
+    var t = firebase.database().ref().child("link1/date");
+    t.on("child_added",snap => {
+    	var date1 = snap.val();
+        $.get("middleman.php", {"site":date1}, function(results){
+      	document.getElementById('timi').innerHTML = date1;
+      });       
+    });
+    var rootRef = firebase.database().ref().child("link1/title");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('head_re').innerHTML = url
+    });
+    var rootRef = firebase.database().ref().child("link1/heading");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('heading').innerHTML = url
+    });
+    var image = firebase.database().ref().child("link1/image");
+    image.on("child_added",snap => {
+        var img1 = snap.val();
+        $.get("middleman.php", {"site":img1}, function(results){
+        var image = document.getElementsByClassName("image1");
+        image.src = img1;
+        $("#image1").attr("src",img1);
+        console.log(img1);
+      });       
+    });
+    document.getElementById('example').style.pointerEvents = 'none';
+    
+//////////////////////////ek ka hua///////////////////////////
+ var t = firebase.database().ref().child("link2/date");
+    t.on("child_added",snap => {
+    	var date1 = snap.val();
+        $.get("middleman.php", {"site":date1}, function(results){
+      	document.getElementById('timi2').innerHTML = date1;
+      });       
+    });
+    var rootRef = firebase.database().ref().child("link2/title");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('head_re2').innerHTML = url
+    });
+    var rootRef = firebase.database().ref().child("link2/heading");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('heading2').innerHTML = url
+    });
+    var image = firebase.database().ref().child("link2/image");
+    image.on("child_added",snap => {
+        var img1 = snap.val();
+        $.get("middleman.php", {"site":img1}, function(results){
+        var image = document.getElementsByClassName("image2");
+        image.src = img1;
+        $("#image2").attr("src",img1);
+        console.log(img1);
+      });       
+    });
+    document.getElementById('example2').style.pointerEvents = 'none';
+       
+//////////////////////////ek ka hua///////////////////////////
+var t = firebase.database().ref().child("link3/date");
+    t.on("child_added",snap => {
+    	var date1 = snap.val();
+        $.get("middleman.php", {"site":date1}, function(results){
+      	document.getElementById('timi3').innerHTML = date1;
+      });       
+    });
+    var rootRef = firebase.database().ref().child("link3/title");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('head_re3').innerHTML = url
+    });
+    var rootRef = firebase.database().ref().child("link3/heading");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('heading3').innerHTML = url
+    });
+    var image = firebase.database().ref().child("link3/image");
+    image.on("child_added",snap => {
+        var img1 = snap.val();
+        $.get("middleman.php", {"site":img1}, function(results){
+        var image = document.getElementsByClassName("image3");
+        image.src = img1;
+        $("#image3").attr("src",img1);
+        console.log(img1);
+      });       
+    });
+    document.getElementById('example3').style.pointerEvents = 'none';
+        
+//////////////////////////ek ka hua///////////////////////////
+var t = firebase.database().ref().child("link4/date");
+    t.on("child_added",snap => {
+    	var date1 = snap.val();
+        $.get("middleman.php", {"site":date1}, function(results){
+      	document.getElementById('timi4').innerHTML = date1;
+      });       
+    });
+    var rootRef = firebase.database().ref().child("link4/title");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('head_re4').innerHTML = url
+    });
+    var rootRef = firebase.database().ref().child("link4/heading");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('heading4').innerHTML = url
+    });
+    var image = firebase.database().ref().child("link4/image");
+    image.on("child_added",snap => {
+        var img1 = snap.val();
+        $.get("middleman.php", {"site":img1}, function(results){
+        var image = document.getElementsByClassName("image4");
+        image.src = img1;
+        $("#image4").attr("src",img1);
+        console.log(img1);
+      });       
+    });
+    document.getElementById('example4').style.pointerEvents = 'none';
+        
+//////////////////////////ek ka hua///////////////////////////
+ var t = firebase.database().ref().child("link5/date");
+    t.on("child_added",snap => {
+    	var date1 = snap.val();
+        $.get("middleman.php", {"site":date1}, function(results){
+      	document.getElementById('timi5').innerHTML = date1;
+      });       
+    });
+    var rootRef = firebase.database().ref().child("link5/title");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('head_re5').innerHTML = url
+    });
+    var rootRef = firebase.database().ref().child("link5/heading");
+    rootRef.on("child_added",snap => {
+        var url = snap.val();
+        document.getElementById('heading5').innerHTML = url
+    });
+    var image = firebase.database().ref().child("link5/image");
+    image.on("child_added",snap => {
+        var img1 = snap.val();
+        $.get("middleman.php", {"site":img1}, function(results){
+        var image = document.getElementsByClassName("image5");
+        image.src = img1;
+        $("#image5").attr("src",img1);
+        console.log(img1);
+      });       
+    });
+    document.getElementById('example5').style.pointerEvents = 'none';
+       
+//////////////////////////ek ka hua///////////////////////////
+  function dosomething(val){
+  		console.log(val);
+  		var getInput = "link"+val;
+   		localStorage.setItem("storageName",getInput);
+   		window.location.href = "andar_ka_page2.html";
+	}
+
+</script>
+
+<div id="example"></div>
+<script>
+fetch(' https://linkpreviewer.herokuapp.com/?link=https://goo.gl/epMmfm')
+.then(r => r.text())
+.then(html => document.getElementById('example').innerHTML = html)
+</script>
+
+
+<script>
+        var userName = localStorage.getItem("userName");
+        document.getElementById("username").innerHTML = userName;
+        console.log(userName);
+    
+        function timestamp(){
+
+            alert("Dekh hua kya?");
+        
+            var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  console.log("Today is : " + daylist[day] + ".");
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var prepand = (hour >= 12)? " PM ":" AM ";
+  hour = (hour >= 12)? hour - 12: hour;
+  if (hour===0 && prepand===' PM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Noon';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' PM';
+  } 
+  } 
+  if (hour===0 && prepand===' AM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Midnight';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' AM';
+  } 
+  } 
+console.log("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+            
+            user_in_db = userName.substring(0, userName.indexOf('@'));
+            console.log(user_in_db);
+    
+            var rootRef = firebase.database().ref();
+            /*if(rootRef.hasChild(user_in_db)){
+                console.log("h user");
+            }
+            /*
+            if(name!=null){
+                //console.log("user h");
+                firebase.database().ref().child(user_in_db).push("time/"+hour+":"+minute+":"+second);    
+            }
+            else{
+                console.log("Nhi h user");
+                firebase.database.ref.push(user_in_db+"time"+"time");
+                firebase.database().ref().child(user_in_db).push("time/"+hour+":"+minute+":"+second);   
+            }
+            */
+
+            rootRef.child(user_in_db).push(hour+":"+minute+":"+second);
+        }
+    </script>
+
+
+
+</body>
+</html>
+    
+    
+    <!-- Our Creative Portfolio Area End -->
+
+    <!-- ****** Footer Social Icon Area Start -->
+        
+    
+    <!-- ****** Footer Menu Area End ****** -->
+
+    <!-- Jquery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins JS -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="js/active.js"></script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+    <script src="js/google-map/map-active.js"></script>
+</body>

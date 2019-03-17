@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Links page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="jquery-2.2.4.min.js"></script>
+    <style>
+        #image1{
+            width:50%;
+            height:50%;
+            padding:5px;
+            margin: 0 auto;
+            margin-left:25%;
+        }
+        #example{
+            text-align: center;
+            padding: 10px;
+        }
+        #timi{
+            padding: 30px;
+        }
+    </style>
+    
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBsU8Y4TbAIyu8GsRDuZyTzw0_37eke1nY",
+    authDomain: "pichkari-118b9.firebaseapp.com",
+    databaseURL: "https://pichkari-118b9.firebaseio.com",
+    projectId: "pichkari-118b9",
+    storageBucket: "pichkari-118b9.appspot.com",
+    messagingSenderId: "908054057055"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    
+
+    <!-- Background Pattern Swither -->
+
+    <!-- ****** Header Area Start ****** -->
+    
+    <!-- ****** Header Area End ****** -->
+
+    <!-- ****** ut description Area Start ****** -->
+    
+    <div class="breadcumb-area" style="background-image: url(img/bg-img/breadcumb.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="bradcumb-title text-center">
+                        <h2>REUTERS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="breadcumb-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">RAM</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ****** Breadcumb Area End ****** -->
+
+    <!-- ****** Archive Area Start ****** -->
+    
+<h1 id="example"></h1><img id="image1" src="reuters.png" alt="image"><div id="timi"></div>
+
+<script>
+    
+    var link_name = localStorage.getItem("storageName");
+   // window.onload = alert(link_name);
+    
+    var t = firebase.database().ref().child(link_name+"/paragraph");
+    t.on("child_added",snap => {
+    	var para1 = snap.val();
+        $.get("middleman.php", {"site":para1}, function(results){
+      	document.getElementById('timi').innerHTML = para1;
+      });       
+    });
+    var rootRef = firebase.database().ref().child(link_name+"/heading");
+    rootRef.on("child_added",snap => {
+        var head1 = snap.val();
+        $.get("middleman.php", {"site":head1}, function(results){
+        document.getElementById('example').innerHTML = head1;
+        });
+    });
+    var image = firebase.database().ref().child(link_name+"/image");
+    image.on("child_added",snap => {
+        var img1 = snap.val();
+        $.get("middleman.php", {"site":img1}, function(results){
+        var image = document.getElementsByClassName("image1");
+        image.src = img1;
+        $("#image1").attr("src",img1);
+        console.log(img1);
+      });       
+    });
+    
+
+
+    var image = document.getElementsByClassName("image2");
+    image.src = "image1.jpg"
+//////////////////////////ek ka hua///////////////////////////
+    
+  
+
+</script>
+</body>
+</html>
+    
+    
+    <!-- Our Creative Portfolio Area End -->
+
+    <!-- ****** Footer Social Icon Area Start -->
+        
+    
+    <!-- ****** Footer Menu Area End ****** -->
+
+    <!-- Jquery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins JS -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="js/active.js"></script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+    <script src="js/google-map/map-active.js"></script>
+</body>
